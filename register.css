@@ -3,16 +3,16 @@
     padding: 0;
     font-family:san-serif;
 }
-    body{
-        height :100px;
-        width:200px;
-        background-color: #0f0fda69;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;              /* Full screen height */
+    display: flex;
+    justify-content: center;    /* Horizontal center */
+    align-items: center;        /* Vertical center */
+    background-color: #0f0fda69;
+    font-family: sans-serif;
+ }
     h1{
         text-align:center;
         padding: 20px;
