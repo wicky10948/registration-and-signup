@@ -1,6 +1,4 @@
 const API_URL = "https://iguru.co.ke/PLAYGROUND/sdg/users/register.php"; 
-// If your API endpoint is different, change it here
-
 document.getElementById("register").addEventListener("submit", async (e) => {
   e.preventDefault();
 
