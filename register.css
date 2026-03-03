@@ -1,47 +1,49 @@
-body {
-    background-color: #8e8cd8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    title{
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family:san-serif;
 }
+    body{
+        height :100px;
+        width:200px;
+        background-color: #0f0fda69;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        text-align:center;
+        padding: 20px;
+        color: white;   
+    }
+    form-box{
+        width: 30px;
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+    }
+    button-box{
+        width: 30px;
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    toogle-box{
+        width:20px;
+        height:20px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    button{
+        top:20px;
+        left:2px;
+        width: 100%;        
+    }
 
-.login-container {
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-}
-h1{text-align: center;}
-.login-form {
-    margin-top: 20px;
-}
-
-
-h2 {
-    margin-bottom: 20px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background: #6c63ff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-a {
-    display: block;
-    margin-top: 15px;
-}
