@@ -4,7 +4,7 @@ h1{
     text-align: center;
     padding: 20px;
 }
-login-container{
+    login-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,6 +52,7 @@ body{
         background-color: red;
         border-radius: 50px;
         width: 80%;
+        height: 50vh;
         justify-content: center;
         align-content: center;
    }
