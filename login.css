@@ -1,0 +1,67 @@
+h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+}
+login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+label{
+    font-size: 18px;
+    background-color: red;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    width: 50%;
+    height: auto
+}
+.label-username{
+        font-size: 18px;
+        color: white;
+        margin-bottom: 10px;
+        width: 50%;
+        height: auto;
+        text-align: center;
+    }
+body{
+    background-color: blue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    .login-form button {
+        display: block;
+        width: 100%;
+    }
+   .form-id-login{
+        width: 30px;
+        margin: 20px;
+        padding: 20px;
+        align-content: center;
+   }
+   .login-form {
+        display: flex;
+        flex-direction: column;
+        margin: 70px;
+        padding: 70px;
+        background-color: red;
+        border-radius: 50px;
+        width: 80%;
+        justify-content: center;
+        align-content: center;
+   }
+  .login-form input{
+        padding: 20px 12px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        align-content: center;
+        text-align: center;
+  }
+
+
