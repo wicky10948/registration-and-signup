@@ -80,7 +80,7 @@
         transform: translateX(-50%);
     }
     body{
-        background-color: #0f0fda69;
+        background-color:blue;
         text-align: center;
         display: flex;
         flex-direction: column;
