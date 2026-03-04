@@ -37,6 +37,8 @@ body{
     .login-form button {
         display: block;
         width: 100%;
+        background-color: rgb(115, 16, 230);
+        padding : 20px 40px;
     }
    .form-id-login{
         width: 30px;
