@@ -1,6 +1,6 @@
 const API_URL = "https://iguru.co.ke/PLAYGROUND/sdg/users/login.php";
 
-document.getElementById("login").addEventListener("submit", async (e) => {
+document.getElementById("login-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const username = document.getElementById("username").value.trim();

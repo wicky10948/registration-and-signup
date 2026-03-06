@@ -11,9 +11,9 @@ body{
 }
 
 h1{
-    margin-top: 50px;
+    margin-top: 40px;
     margin-bottom: -60px;
-    font-family: cursive;
+    font-family: sans-serif;
     font-size: 40px;
     color: rgb(49, 47, 47);
 }
@@ -38,7 +38,7 @@ h1{
 
 }
 .register-submit-button{
-    background-color: rgb(115,16,230);
+    background-color: black;
     border: none;
     padding:12px;
 }
@@ -50,5 +50,5 @@ p{
 }
 
 a{
-    color: rgb(31, 31, 30);
+    color:blue;
 }
