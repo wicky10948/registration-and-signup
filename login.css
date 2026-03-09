@@ -16,7 +16,7 @@ h1{
     font-family: sans-serif;
     color: white;
     font-size: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 }
 
 .login-container{
@@ -57,7 +57,7 @@ h1{
 }
 
 p{
-    margin-top: 20px;
+    margin-top: -20px;
     color: rgb(26, 24, 24);
     font-size: 16px;
 }
