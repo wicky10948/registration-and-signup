@@ -50,7 +50,7 @@ h1{
     text-align: center;
 }
 .login-form button{
-    background-color: rgb(115,16,230);
+    background-color:blue;
     border: none;
     padding: 12px;
     font-size: 16px;
@@ -64,6 +64,6 @@ p{
 
 
 a{
-    color: yellow;
+    color: rgb(236, 91, 103);
     text-decoration: none;
 }
