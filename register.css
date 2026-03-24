@@ -3,9 +3,6 @@ body{
     font-family: Arial, sans-serif;
 }
 
-
-/* Title */
-
 h1{
     margin-bottom: 20px;
     margin-top: 10rem;
@@ -37,5 +34,5 @@ p{
 }
 
 a{
-    color: rgb(31, 31, 30);
+    color: blue;
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <h2>Dashboard</h2>
+
+    <table class="dashboard-table">
+        <thead>
+            <tr>
+                <th>Stats</th>
+                <th>Activities</th>
+                <th>Leaderboard</th>
+                <th>Announcements</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <!-- Stats -->
+                <td>
+                    <div id="stats"></div>
+                </td>
+
+                <!-- Activities -->
+                <td>
+                    <ul id="activities"></ul>
+                </td>
+
+                <!-- Leaderboard -->
+                <td>
+                    <ul id="leaderboard"></ul>
+                </td>
+
+                <!-- Announcements -->
+                <td>
+                    <div id="announcements"></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
