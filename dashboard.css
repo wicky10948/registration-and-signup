@@ -33,7 +33,7 @@ h2 {
 }
 
 .dashboard-table th {
-    background: #095ad3;
+    background:red;
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -80,8 +80,8 @@ button {
     margin-top: 20px;
     padding: 10px 15px;
     border: none;
-    background: #1f1e1e;
-    color: #095ad3;
+    background:red;
+    color:black;
     border-radius: 6px;
     cursor: pointer;
 
