@@ -1,12 +1,5 @@
 // 🔹 Mock Data (replace later with API)
 const data = {
-  stats: [
-    { label: "Total Players", value: "1,240" },
-    { label: "Active Teams", value: "42" },
-    { label: "Games Played", value: "856" },
-    { label: "Points Awarded", value: "12,450" },
-    { label: "New signups (24h)", value: "18" }
-  ],
   activities: [
     {
       description: "Points verification completed for Game #45",
@@ -57,7 +50,14 @@ const data = {
       content: "Congratulations to all participants of the March games!",
       date: "2026-03-17"
     }
-  ]
+  ],
+  stats: [
+    { label: "Total Players", value: "1,240" },
+    { label: "Active Teams", value: "42" },
+    { label: "Games Played", value: "856" },
+    { label: "Points Awarded", value: "12,450" },
+    { label: "New signups (24h)", value: "18" }
+  ],
 };
 
 
@@ -67,8 +67,6 @@ function renderList(containerId, items, templateFn) {
   const container = document.getElementById(containerId);
   container.innerHTML = items.map(templateFn).join("");
 }
-
-
 
 // 🔹 Templates
 const templates = {
@@ -88,15 +86,15 @@ const templates = {
   `,
 
   leaderboard: (item) => `
-    <div class="table-card">
-      <span>#${item.rank}</span>
-      <span>${item.name}</span>
+    <div class="table-row">
+      <span>${item.rank}</span>
+      <sp>${item.name}</p>
       <strong>${item.score}</strong>
     </div>
   `,
 
   announcement: (item) => `
-    <div class="table-card">
+    <div class="table-row">
       <h4>${item.title}</h4>
       <p>${item.content}</p>
       <small>${item.date}</small>
@@ -104,9 +102,6 @@ const templates = {
   `
 };
 
-
-
-// 🔹 Initialize Dashboard
 function initDashboard(data) {
   renderList("stats", data.stats, templates.stat);
   renderList("activities", data.activities, templates.activity);
@@ -124,5 +119,5 @@ initDashboard(data);
 // 🔹 Optional Logout
 function logout() {
   alert("Logging out...");
-  // window.location.href = "login.html";
+   window.location.href = "login.html";
 }

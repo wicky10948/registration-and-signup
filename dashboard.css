@@ -6,7 +6,7 @@ body {
 }
 
 .dashboard-container {
-    padding: 20px;
+    padding: 50px;
 }
 
 
@@ -23,6 +23,13 @@ h2 {
     background: blue;
     border-radius: 10px;
     overflow: hidden;
+}
+.table-card{
+    height: auto;
+    width:150px;
+}
+.table-row{
+    border-radius: 30PX;
 }
 
 .dashboard-table th {
@@ -42,7 +49,10 @@ h2 {
 .dashboard-table td:last-child {
     border-right: none;
 }
-
+.leaderboard-table-row {
+    
+    border-width: 60px;
+}
 
 ul {
     list-style: none;
@@ -51,7 +61,7 @@ ul {
 }
 
 #activities div,
-#leaderboard div,
+#leaderboard ,
 #stats div,
 #announcements div {
     background: white;
@@ -60,9 +70,9 @@ ul {
     border-radius: 16px;
 }
 #leaderboard li {
-    display: flex;
-    justify-content: space-between;
-    padding:-60px;
+    display: block;
+    padding: 70px;
+    border-bottom: 1px solid #eee;
 
 }
 
@@ -76,7 +86,31 @@ button {
     cursor: pointer;
 
 }
+.table-row {
+    
+    justify-content: space-between;
+
+}
+
 
 button:hover {
     background: #e6e9ff;
+}
+/* Default (desktop) */
+.container {
+  display: flex;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+  .box {
+    font-size: 14px;
+  }
 }

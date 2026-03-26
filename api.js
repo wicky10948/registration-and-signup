@@ -35,8 +35,8 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
       // Optional success message
       alert("Login successful! Welcome, " + playerName);
 
-      // ✅ Redirect to dashboard (use absolute path to avoid path issues)
-      window.location.href = "/dashboard.html";
+      // Redirect to dashboard (use absolute path to avoid path issues)
+      window.location.href = "dashboard.html";
 
     } else {
       alert(data.message || "Login failed. Check your credentials.");
