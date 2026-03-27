@@ -55,7 +55,6 @@ const data = {
     { label: "Total Players", value: "1,240" },
     { label: "Active Teams", value: "42" },
     { label: "Games Played", value: "856" },
-    { label: "Points Awarded", value: "12,450" },
     { label: "New signups (24h)", value: "18" }
   ],
 };
@@ -72,10 +71,10 @@ function renderList(containerId, items, templateFn) {
 const templates = {
 
   stat: (item) => `
-    <div class="table-card">
-      <p>${item.label}</p>
-      <h2>${item.value}</h2>
-    </div>
+      <div class="stats">
+        <p>${item.label}</p>
+        <h2>${item.value}</h2>
+      </div>
   `,
 
   activity: (item) => `
@@ -94,7 +93,7 @@ const templates = {
   `,
 
   announcement: (item) => `
-    <div class="table-row">
+      <div class="Announcements-card">
       <h4>${item.title}</h4>
       <p>${item.content}</p>
       <small>${item.date}</small>
@@ -103,7 +102,7 @@ const templates = {
 };
 
 function initDashboard(data) {
-  renderList("stats", data.stats, templates.stat);
+  renderList("total-games", data.stats, templates.stat);
   renderList("activities", data.activities, templates.activity);
   renderList("leaderboard", data.leaderboard, templates.leaderboard);
   renderList("announcements", data.announcements, templates.announcement);
@@ -121,7 +120,7 @@ function logout() {
   alert("Logged out successfully!",);
   alert("Invalid password!", "error");
   alert("Check your input!", "warning");
-   window.location.href = "login.html";
+  window.location.href = "login.html";
 
-   
+
 }
