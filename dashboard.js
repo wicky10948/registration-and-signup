@@ -87,8 +87,8 @@ const templates = {
 
   leaderboard: (item) => `
     <div class="table-row">
-      <span>${item.rank}</span>
-      <sp>${item.name}</p>
+      <div>${item.rank}</div>
+      <p>${item.name}</p>
       <strong>${item.score}</strong>
     </div>
   `,
@@ -115,9 +115,13 @@ function initDashboard(data) {
 initDashboard(data);
 
 
-
 // 🔹 Optional Logout
 function logout() {
-  alert("Logging out...");
+  alert(" Logout successful!");
+  alert("Logged out successfully!",);
+  alert("Invalid password!", "error");
+  alert("Check your input!", "warning");
    window.location.href = "login.html";
+
+   
 }
