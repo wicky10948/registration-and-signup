@@ -116,11 +116,7 @@ initDashboard(data);
 
 // 🔹 Optional Logout
 function logout() {
-  alert(" Logout successful!");
-  alert("Logged out successfully!",);
-  alert("Invalid password!", "error");
-  alert("Check your input!", "warning");
+  localStorage.clear(); // Clear session data
+  alert("Logged out successfully!");
   window.location.href = "login.html";
-
-
 }
