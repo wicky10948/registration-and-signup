@@ -1,67 +1,94 @@
+
 .body {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px  
+    grid-template-columns: 250px 1fr; /* sidebar + content */
+    min-height: 100vh;
 }
 
-.button {
+
+
+.sidebar {
+    background-color: blue;
+    color: white;
     display: flex;
-    flex-direction: row ;
-    background-color: aliceblue;
-    align-items: self-start;
-    padding: 4px;
-    margin-bottom: 12px;
-    border-radius: 4px;
+    flex-direction: column;
+    padding: 10px;
 }
 
 .sidebar-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100dvh;
+    flex: 1; 
 }
 
 .sidebar-buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 4px;
-
+    gap: 10px;
 }
 
-.sidebar-header {
-    font-size: medium;
-    color: aliceblue;
-    padding: 4px;
+.button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
 }
+
+
 
 .logout-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 4px;
-    margin-bottom: -10rem;
-    
+    margin-top: 100px
 }
 
 .signout-button {
-    background-color: red;
-    color:white;
-    padding: 4px;
-    border-radius: 4px;
-    margin-top: 86px;
+    width: 100%;
+    padding: 8px;
+    background: red;
+    color: white;
+    border: none;
 }
 
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    padding: 20px;
+}
+
+
+/* ===== DASHBOARD ===== */
 .dashboard-summary {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
 }
 
 .stats {
-    display: flex;
-    flex-direction: column;
-    border:  1px solid #242121;
+    border: 1px solid #242121;
     padding: 10px;
     border-radius: 6px;
+}
+@media (max-width: 768px) {
+    .body {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sidebar-content {
+        flex-direction: row;
+        align-items: center;
+        background-color: blue;
+    }
+
+    .sidebar-buttons {
+        flex-direction: row;
+    }
+
+    .logout-button {
+        margin-top: 0;
+    }
 }
