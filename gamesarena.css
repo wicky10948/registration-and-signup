@@ -10,7 +10,7 @@
     background-color: aliceblue;
     align-items: self-start;
     padding: 4px;
-    margin-bottom: 4px;
+    margin-bottom: 12px;
     border-radius: 4px;
 }
 
@@ -26,6 +26,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 4px;
+
 }
 
 .sidebar-header {
@@ -39,6 +40,8 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 4px;
+    margin-bottom: -10rem;
+    
 }
 
 .signout-button {
@@ -46,6 +49,7 @@
     color:white;
     padding: 4px;
     border-radius: 4px;
+    margin-top: 86px;
 }
 
 .dashboard-summary {

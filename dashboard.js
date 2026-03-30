@@ -1,122 +1,131 @@
-// 🔹 Mock Data (replace later with API)
+// 🔹 Mock Data (you can replace with API later)
 const data = {
-  activities: [
-    {
-      description: "Points verification completed for Game #45",
-      category: "Admin",
-      time_ago: "5 hours ago"
-    },
-    {
-      description: "Jane Smith registered as a new player",
-      category: "User",
-      time_ago: "3 hours ago"
-    },
-    {
-      description: "New announcement posted: Weekly Challenge",
-      category: "System",
-      time_ago: "1 hour ago"
-    },
-    {
-      description: "Team Alpha updated their logo",
-      category: "Team",
-      time_ago: "15 mins ago"
-    },
-    {
-      description: "John Doe achieved a new high score in Jigsaw",
-      category: "Game",
-      time_ago: "2 mins ago"
-    }
-  ],
-  leaderboard: [
-    { name: "Team Phoenix", score: "4500", rank: "1" },
-    { name: "Sky Walkers", score: "4200", rank: "2" },
-    { name: "Cyber Knights", score: "3950", rank: "3" },
-    { name: "Ocean Breakers", score: "3800", rank: "4" },
-    { name: "Fire Dragons", score: "3600", rank: "5" }
-  ],
-  announcements: [
-    {
-      title: "Upcoming Maintenance",
-      content: "The system will be offline for 2 hours this Sunday for updates.",
-      date: "2026-03-20"
-    },
-    {
-      title: "Welcome to the SDG Dashboard",
-      content: "This is a live data feed for testing the frontend integration.",
-      date: "2026-03-18"
-    },
-    {
-      title: "March Tournament Results",
-      content: "Congratulations to all participants of the March games!",
-      date: "2026-03-17"
-    }
-  ],
-  stats: [
-    { label: "Total Players", value: "1,240" },
-    { label: "Active Teams", value: "42" },
-    { label: "Games Played", value: "856" },
-    { label: "New signups (24h)", value: "18" }
-  ],
+    stats: [
+        { label: "Total Players", value: "1,240" },
+        { label: "Active Teams", value: "42" },
+        { label: "Games Played", value: "856" },
+        { label: "Points Awarded", value: "12,450" }
+    ],
+
+    activities: [
+        "Team Alpha won against Team Beta",
+        "New team 'Warriors' registered",
+        "Game #857 completed",
+        "Leaderboard updated"
+    ],
+
+    leaderboard: [
+        { team: "Alpha", points: 120 },
+        { team: "Bravo", points: 110 },
+        { team: "Charlie", points: 95 },
+        { team: "Delta", points: 80 }
+    ],
+
+    announcements: [
+        { title: "New Tournament", message: "Register before Friday!" },
+        { title: "Maintenance", message: "System downtime at 10PM" },
+        { title: "Update", message: "New scoring rules applied" }
+    ]
 };
 
 
+// 🔹 Load Dashboard Summary
+const summaryContainer = document.getElementById("total-games");
 
-// 🔹 Generic Renderer
-function renderList(containerId, items, templateFn) {
-  const container = document.getElementById(containerId);
-  container.innerHTML = items.map(templateFn).join("");
-}
+data.stats.forEach(stat => {
+    const card = document.createElement("div");
+    card.classList.add("stats");
 
-// 🔹 Templates
-const templates = {
+    card.innerHTML = `
+        <h3>${stat.value}</h3>
+        <p>${stat.label}</p>
+    `;
 
-  stat: (item) => `
-      <div class="stats">
-        <p>${item.label}</p>
-        <h2>${item.value}</h2>
-      </div>
-  `,
-
-  activity: (item) => `
-    <div class="activity-item">
-      <p>${item.description}</p>
-      <small>${item.category} • ${item.time_ago}</small>
-    </div>
-  `,
-
-  leaderboard: (item) => `
-    <div class="table-row">
-      <div>${item.rank}</div>
-      <p>${item.name}</p>
-      <strong>${item.score}</strong>
-    </div>
-  `,
-
-  announcement: (item) => `
-      <div class="Announcements-card">
-      <h4>${item.title}</h4>
-      <p>${item.content}</p>
-      <small>${item.date}</small>
-    </div>
-  `
-};
-
-function initDashboard(data) {
-  renderList("total-games", data.stats, templates.stat);
-  renderList("activities", data.activities, templates.activity);
-  renderList("leaderboard", data.leaderboard, templates.leaderboard);
-  renderList("announcements", data.announcements, templates.announcement);
-}
+    summaryContainer.appendChild(card);
+});
 
 
+// 🔹 Load Activities
+const activitiesContainer = document.getElementById("activities");
 
-// 🚀 Run
-initDashboard(data);
+const activitiesTitle = document.createElement("h2");
+activitiesTitle.textContent = "Recent Activities";
+activitiesContainer.appendChild(activitiesTitle);
+
+const activityList = document.createElement("ul");
+
+data.activities.forEach(activity => {
+    const li = document.createElement("li");
+    li.textContent = activity;
+    activityList.appendChild(li);
+});
+
+activitiesContainer.appendChild(activityList);
 
 
-// 🔹 Optional Logout
-function logout() {
-  localStorage.clear(); // Clear session data
-  alert("Logged out successfully!");
-  window.location.href = "login.html";
-}
+// 🔹 Load Leaderboard
+const leaderboardContainer = document.getElementById("leaderboard");
+
+const leaderboardTitle = document.createElement("h2");
+leaderboardTitle.textContent = "Leaderboard";
+leaderboardContainer.appendChild(leaderboardTitle);
+
+const table = document.createElement("table");
+
+table.innerHTML = `
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Team</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+`;
+
+const tbody = document.createElement("tbody");
+
+data.leaderboard.forEach((team, index) => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${team.team}</td>
+        <td>${team.points}</td>
+    `;
+
+    tbody.appendChild(row);
+});
+
+table.appendChild(tbody);
+leaderboardContainer.appendChild(table);
+
+
+// 🔹 Load Announcements
+const announcementsContainer = document.getElementById("announcements");
+
+const announcementTitle = document.createElement("h2");
+announcementTitle.textContent = "Announcements";
+announcementsContainer.appendChild(announcementTitle);
+
+data.announcements.forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("announcement-card");
+
+    card.innerHTML = `
+        <h3>${item.title}</h3>
+        <p>${item.message}</p>
+    `;
+
+    announcementsContainer.appendChild(card);
+});
+
+
+// 🔹 Logout Function
+const logoutBtn = document.querySelector(".signout-button");
+
+logoutBtn.addEventListener("click", () => {
+    alert("Logging out...");
+    
+    // Example: redirect to login page
+    window.location.href = "login.html";
+});
