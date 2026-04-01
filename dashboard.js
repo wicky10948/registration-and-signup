@@ -1,4 +1,3 @@
-// 🔹 Mock Data (you can replace with API later)
 const data = {
     stats: [
         { label: "Total Players", value: "1,240" },
@@ -29,7 +28,7 @@ const data = {
 };
 
 
-// 🔹 Load Dashboard Summary
+//  Load Dashboard Summary
 const summaryContainer = document.getElementById("total-games");
 
 data.stats.forEach(stat => {
@@ -45,7 +44,7 @@ data.stats.forEach(stat => {
 });
 
 
-// 🔹 Load Activities
+//  Load Activities
 const activitiesContainer = document.getElementById("activities");
 
 const activitiesTitle = document.createElement("h2");
@@ -63,7 +62,7 @@ data.activities.forEach(activity => {
 activitiesContainer.appendChild(activityList);
 
 
-// 🔹 Load Leaderboard
+//  Load Leaderboard
 const leaderboardContainer = document.getElementById("leaderboard");
 
 const leaderboardTitle = document.createElement("h2");
@@ -100,7 +99,7 @@ table.appendChild(tbody);
 leaderboardContainer.appendChild(table);
 
 
-// 🔹 Load Announcements
+//  Load Announcements
 const announcementsContainer = document.getElementById("announcements");
 
 const announcementTitle = document.createElement("h2");
@@ -120,7 +119,7 @@ data.announcements.forEach(item => {
 });
 
 
-// 🔹 Logout Function
+//  Logout Function
 const logoutBtn = document.querySelector(".signout-button");
 
 logoutBtn.addEventListener("click", () => {

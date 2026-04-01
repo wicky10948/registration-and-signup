@@ -3,10 +3,7 @@
     display: grid;
     grid-template-columns: 250px 1fr; /* sidebar + content */
     min-height: 100vh;
-}
-
-
-
+}   
 .sidebar {
     background-color: blue;
     color: white;
@@ -49,13 +46,11 @@
 }
 
 
-/* ===== MAIN CONTENT ===== */
+
 .main-content {
     padding: 20px;
 }
 
-
-/* ===== DASHBOARD ===== */
 .dashboard-summary {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
