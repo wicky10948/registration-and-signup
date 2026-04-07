@@ -22,8 +22,6 @@ let teams = [
 
 let selectedTeamId = null;
 
-/* ================= TEAMS ================= */
-
 // Load Teams
 function loadTeams() {
     teamsTable.innerHTML = "";
@@ -112,7 +110,6 @@ function closeTeamForm() {
     document.getElementById("teamForm").classList.add("hidden");
 }
 
-/* ================= PLAYERS ================= */
 
 // View Players
 function viewPlayers(teamId) {

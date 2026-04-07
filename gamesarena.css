@@ -1,67 +1,149 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* MAIN LAYOUT */
 .body {
     display: grid;
-    grid-template-columns: 250px 1fr; /* sidebar + content */
+    grid-template-columns: 250px 1fr;
     min-height: 100vh;
-}   
+}
+
+/* SIDEBAR */
 .sidebar {
-    background-color: blue;
+    background-color: #2c3e50;
     color: white;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    gap:4px;
 }
 
-
+/* Sidebar content */
 .sidebar-content {
     display: flex;
     flex-direction: column;
-    flex: 1; 
+    flex: 1;
 }
 
-.button {
-    width: 100%;
-    padding: 8px;
-    border-radius: 4px;
-    border: none;
-}
-
-.logout-button {
-    margin-top: 100px
-}
-
+/* Sidebar buttons container */
 .sidebar-buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    cursor: pointer;
+    gap: 12px;
+    padding: 19px;
+
 }
+
+/* NAV BUTTONS */
+.button {
+    display: block;
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #007bff;
+}
+
+/* ACTIVE BUTTON */
+.button.active {
+    margin-top: 10px;
+    background: #007bff;
+}
+
+/* LOGOUT */
 .signout-button {
-    width: 100%;
-    padding: 8px;
-    background: red;
+    margin-top: auto;
+    padding: 10px;
+    background: #e74c3c;
     color: white;
     border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 30px;
 }
 
+.signout-button:hover {
+    background: #c0392b;
+}
 
-
+/* MAIN CONTENT */
 .main-content {
     padding: 20px;
+    background: #f4f6f9;
 }
 
+/* DASHBOARD SUMMARY */
 .dashboard-summary {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
 }
 
+/* STAT CARDS */
 .stats {
-    border: 1px solid #242121;
-    padding: 10px;
-    border-radius: 6px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
 }
+
+.stats h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.stats p {
+    color:#34495e;
+    margin-top: 10px;
+}
+
+/* TABLES */
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+/* ANNOUNCEMENTS */
+.announcement-card {
+    background: white;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #007bff;
+}
+.announcement-card h4 {
+    margin-bottom: 8px;
+}
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
+
     .body {
         grid-template-columns: 1fr;
     }
@@ -75,11 +157,22 @@
     .sidebar-content {
         flex-direction: row;
         align-items: center;
-        background-color: blue;
+        gap: 10px;
     }
 
+    .sidebar-buttons {
+        flex-direction: row;
+    }
 
-    .logout-button {
+    .button {
+        width: auto;
+        padding: 8px 12px;
+    }
+
+    .signout-button {
         margin-top: 0;
+    }
+    .h3{
+        margin-top: -4px;
     }
 }
