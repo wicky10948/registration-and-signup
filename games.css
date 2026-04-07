@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    color: red;
+    text-decoration: underline;
+}
+.body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    min-height: 100vh;
+}
+
+.game-container {
+    background:blue;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+h3{
+    text-decoration: dotted underline;
+    color:blue;
+
+}

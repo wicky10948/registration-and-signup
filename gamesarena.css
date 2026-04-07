@@ -12,16 +12,11 @@
     padding: 10px;
 }
 
+
 .sidebar-content {
     display: flex;
     flex-direction: column;
     flex: 1; 
-}
-
-.sidebar-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 .button {
@@ -31,12 +26,16 @@
     border: none;
 }
 
-
-
 .logout-button {
     margin-top: 100px
 }
 
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
 .signout-button {
     width: 100%;
     padding: 8px;
@@ -79,9 +78,6 @@
         background-color: blue;
     }
 
-    .sidebar-buttons {
-        flex-direction: row;
-    }
 
     .logout-button {
         margin-top: 0;

@@ -1,23 +1,22 @@
 const data = {
     stats: [
-        { label: "Total Players", value: "1,240" },
-        { label: "Active Teams", value: "42" },
-        { label: "Games Played", value: "856" },
-        { label: "Points Awarded", value: "12,450" }
+        { label: "Total Players", value: "0" },
+        { label: "Active Teams", value: "0" },
+        { label: "Games Played", value: "0" },
+        { label: "Points Awarded", value: "0" }
     ],
 
     activities: [
         "Team Alpha won against Team Beta",
         "New team 'Warriors' registered",
-        "Game #857 completed",
         "Leaderboard updated"
     ],
 
     leaderboard: [
-        { team: "Alpha", points: 120 },
-        { team: "Bravo", points: 110 },
-        { team: "Charlie", points: 95 },
-        { team: "Delta", points: 80 }
+        { team: "Alpha", points: 0 },
+        { team: "Bravo", points: 0 },
+        { team: "Charlie", points: 0 },
+        { team: "Delta", points: 0 }
     ],
 
     announcements: [

@@ -9,17 +9,15 @@
 <body>
 
 <div class="container">
-
     <h1>Teams</h1>
 
     <button id="addTeamBtn" class="btn primary">+ Add Team</button>
 
-    <!-- TEAMS TABLE -->
     <table>
         <thead>
             <tr>
                 <th>#</th>
-                <th>Team</th>
+                <th>Team Name</th>
                 <th>Points</th>
                 <th>Actions</th>
             </tr>
@@ -27,10 +25,9 @@
         <tbody id="teamsTable"></tbody>
     </table>
 
-    <!-- TEAM FORM -->
+    <!-- Team Form -->
     <div id="teamForm" class="form hidden">
         <h3 id="formTitle">Add Team</h3>
-
         <input type="hidden" id="teamId">
         <input type="text" id="teamName" placeholder="Team Name">
         <input type="number" id="teamPoints" placeholder="Points">
@@ -39,7 +36,7 @@
         <button class="btn danger" onclick="closeTeamForm()">Cancel</button>
     </div>
 
-    <!-- PLAYERS SECTION -->
+    <!-- Players Section -->
     <div id="playersSection" class="hidden">
         <h2>Players</h2>
 
@@ -58,10 +55,9 @@
         </table>
     </div>
 
-    <!-- PLAYER FORM -->
+    <!-- Player Form -->
     <div id="playerForm" class="form hidden">
         <h3>Player</h3>
-
         <input type="hidden" id="playerId">
         <input type="text" id="playerName" placeholder="Player Name">
         <input type="number" id="playerScore" placeholder="Score">
@@ -71,7 +67,6 @@
     </div>
 
     <a href="home.html" class="back">← Back to Dashboard</a>
-
 </div>
 
 <script src="teams.js"></script>
