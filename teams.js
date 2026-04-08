@@ -1,6 +1,7 @@
 const teamsTable = document.getElementById("teamsTable");
 
-let teams = [
+// Load from localStorage OR default data
+let teams = JSON.parse(localStorage.getItem("teams")) || [
     {
         id: 1,
         name: "Alpha",
@@ -17,10 +18,23 @@ let teams = [
         players: [
             { id: 1, name: "Chris", score: 80 }
         ]
+    },
+    {
+        id: 3,
+        name: "Charlie",
+        points: 180,
+        players: [
+            { id: 1, name: "Sarah", score: 90 }
+        ]
     }
 ];
 
 let selectedTeamId = null;
+
+// Save to localStorage
+function saveToStorage() {
+    localStorage.setItem("teams", JSON.stringify(teams));
+}
 
 // Load Teams
 function loadTeams() {
@@ -92,6 +106,7 @@ function saveTeam() {
         team.points = points;
     }
 
+    saveToStorage();
     loadTeams();
     closeTeamForm();
 }
@@ -101,6 +116,8 @@ function deleteTeam(id) {
     if (!confirm("Delete team?")) return;
 
     teams = teams.filter(t => t.id !== id);
+
+    saveToStorage();
     loadTeams();
 
     document.getElementById("playersSection").classList.add("hidden");
@@ -180,6 +197,7 @@ function savePlayer() {
         player.score = score;
     }
 
+    saveToStorage();
     viewPlayers(selectedTeamId);
     closePlayerForm();
 }
@@ -191,6 +209,7 @@ function deletePlayer(playerId) {
     let team = teams.find(t => t.id === selectedTeamId);
     team.players = team.players.filter(p => p.id !== playerId);
 
+    saveToStorage();
     viewPlayers(selectedTeamId);
 }
 
